@@ -1,0 +1,37 @@
+name: lifetap_code_challenge
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  clickable_list_wheel_view: ^0.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: AvenirRegular
+      fonts:
+        - asset: assets/fonts/avenir_regular.ttf
+    - family: AvenirBlack
+      fonts:
+        - asset: assets/fonts/avenir_black.ttf
+    - family: SfProDisplayRegular
+      fonts:
+        - asset: assets/fonts/sf_pro_display_regular.ttf
+    - family: SfProTextRegular
+      fonts:
+        - asset: assets/fonts/sf_pro_text_regular.ttf
