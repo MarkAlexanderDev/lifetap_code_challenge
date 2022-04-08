@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'page/home/index.dart';
+import 'page/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter LifeTap challenge',
       home: PageHome(),
     );

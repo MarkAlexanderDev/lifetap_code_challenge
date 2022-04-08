@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lifetap_code_challenge/modules/styles/colors.dart';
 import 'package:lifetap_code_challenge/modules/styles/text_styles.dart';

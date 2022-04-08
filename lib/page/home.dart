@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:lifetap_code_challenge/modules/styles/colors.dart';
 import 'package:lifetap_code_challenge/modules/styles/text_styles.dart';
 import 'package:lifetap_code_challenge/widgets/atoms/button.dart';
-
-import 'logic.dart';
+import 'package:lifetap_code_challenge/widgets/organisms/country_picker.dart';
 
 class PageHome extends StatelessWidget {
-  PageHome({Key? key}) : super(key: key);
-
-  final HomeLogic logic = HomeLogic();
+  const PageHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +36,26 @@ class PageHome extends StatelessWidget {
                     color: MyColors.text,
                   ),
                 ),
-                onPressed: () => logic.showCountryPicker(context),
+                onPressed: () => showCountryPicker(context),
               ),
               const Spacer(),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Future<void> showCountryPicker(BuildContext context) async {
+    await showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      isScrollControlled: true,
+      builder: (_) => Padding(
+        padding: EdgeInsets.only(
+          bottom: MediaQuery.of(context).viewInsets.bottom,
+        ),
+        child: const CountryPicker(),
       ),
     );
   }
